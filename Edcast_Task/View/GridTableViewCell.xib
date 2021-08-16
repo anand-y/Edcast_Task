@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gridTableViewCell" rowHeight="270" id="CCl-gI-BA9" customClass="GridTableViewCell" customModule="Edcast_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="576" height="270"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CCl-gI-BA9" id="7lZ-bJ-Iie">
+                <rect key="frame" x="0.0" y="0.0" width="576" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq7-OQ-ure">
+                        <rect key="frame" x="15" y="5" width="546" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-UK-0CI">
+                        <rect key="frame" x="0.0" y="23" width="576" height="247"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A3Y-Y2-peL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Yho-UK-0CI" secondAttribute="bottom" id="1YH-hh-tSf"/>
+                    <constraint firstAttribute="trailing" secondItem="aq7-OQ-ure" secondAttribute="trailing" constant="15" id="1q4-LO-Qlg"/>
+                    <constraint firstItem="Yho-UK-0CI" firstAttribute="top" secondItem="aq7-OQ-ure" secondAttribute="bottom" id="H8K-K2-RaM"/>
+                    <constraint firstItem="aq7-OQ-ure" firstAttribute="leading" secondItem="7lZ-bJ-Iie" secondAttribute="leading" constant="15" id="aGc-YC-g0U"/>
+                    <constraint firstItem="aq7-OQ-ure" firstAttribute="top" secondItem="7lZ-bJ-Iie" secondAttribute="top" constant="5" id="kvB-HN-cWh"/>
+                    <constraint firstItem="Yho-UK-0CI" firstAttribute="leading" secondItem="7lZ-bJ-Iie" secondAttribute="leading" id="poD-pQ-bKi"/>
+                    <constraint firstAttribute="trailing" secondItem="Yho-UK-0CI" secondAttribute="trailing" id="t8b-el-XZn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="Yho-UK-0CI" id="42X-UY-ve5"/>
+                <outlet property="parentView" destination="7lZ-bJ-Iie" id="r84-xf-Ew5"/>
+                <outlet property="titleLabel" destination="aq7-OQ-ure" id="c60-1n-Gp7"/>
+            </connections>
+            <point key="canvasLocation" x="372.46376811594206" y="259.15178571428572"/>
+        </tableViewCell>
+    </objects>
+</document>
